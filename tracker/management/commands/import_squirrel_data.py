@@ -11,7 +11,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         file_ = options['squirrel_file']
-        with open(options['squirrel_file']) as csvfile:
+        with open(file_) as csvfile:
             reader = csv.DictReader(csvfile)
             for i in reader:
+                s = Squirrel(
+
+                )
+
 
