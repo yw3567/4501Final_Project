@@ -1,5 +1,5 @@
 from django.db import models
-from django.utilis.translation import gettext as _
+from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
     X = models.FloatField(
@@ -103,7 +103,7 @@ class Squirrel(models.Model):
 
     #Above_Ground_Sighter_Measurement = 
 
-    Specific Location = models.CharField(
+    Specific_Location = models.CharField(
     max_length = 25,
     help_text = _('Specific Location'),
     blank = True,
@@ -158,7 +158,7 @@ class Squirrel(models.Model):
     null = True,
     )
 
-    Other Activities = models.CharField(
+    Other_Activities = models.CharField(
     max_length = 50,
     help_text = _('Other Activities'),
     blank = True,
