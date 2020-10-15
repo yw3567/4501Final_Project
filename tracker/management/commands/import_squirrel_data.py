@@ -15,6 +15,14 @@ class Command(BaseCommand):
             reader = csv.DictReader(csvfile)
             for i in reader:
                 s = Squirrel(
+                X
+                Y
+                Unique_Squirrel_ID
+                Shift
+                Date
+                Age
+                Primary_Fur_Color
+
 
                 )
 
