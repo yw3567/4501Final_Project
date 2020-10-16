@@ -2,11 +2,11 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
-    X = models.FloatField(
+    Longitude = models.FloatField(
     help_text = _('x'),
     )
 
-    Y = models.FloatField(
+    Latitude = models.FloatField(
     help_text = _('y'),
     )
 
