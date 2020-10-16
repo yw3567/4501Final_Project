@@ -23,7 +23,7 @@ def list_sights(request):
     return render(request, 'tracker/list.html', context)
 
 def update_sights(request,Unique_Squirrel_Id):
-    sight = Sight.objects.get(Unique_Squirrel_Id=Unique_Squirrel_Id)
+    sight = Squirrel.objects.get(Unique_Squirrel_Id=Unique_Squirrel_Id)
     if request.method == 'POST':
         form = SightForm(request.POST, instance = sight)
         if form.is_valid():
