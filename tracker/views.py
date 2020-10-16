@@ -3,6 +3,9 @@ from .models import Sight
 from django.shortcuts import redirect
 from .forms import SightForm
 
+def homepage(request):
+    return render(request,'tracker/homepage.html')
+
 def map_view(request):
     sights = Sight.objects.all()[:100]
     context = {
