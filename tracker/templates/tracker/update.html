@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+        <head>
+                <title>Squirrel Tracker: Update the Squirrel Sighting</title>
+        </head>
+        <body>
+	<style>
+		body{padding-left:20px; padding-right:20px;}
+	</style>
+		<br>
+		<strong><h2> Update the Squirrel Sighting here!</strong></h2>
+		<hr>
+		<br>
+		<form method='post'>
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <br>
+                        <p>Thank you</p>
+                        <input type="submit" name="save">
+			<br>
+                </form>
+		<br>
+		<p><a href='/'>Go to main page</a></p>
+	</body>
+</html>
