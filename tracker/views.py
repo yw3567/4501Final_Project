@@ -42,7 +42,7 @@ def add_sights(request):
         form = SightForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/tracker/')
+            return redirect(f'/sightings/')
     else:
         form = SightForm()
 
