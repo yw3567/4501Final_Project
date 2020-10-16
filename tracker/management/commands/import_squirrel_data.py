@@ -11,8 +11,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         file_ = options['squirrel_file']
+        
         with open(file_) as csvfile:
             reader = csv.DictReader(csvfile)
+            table = list(reader)
+
             for i in reader:
                 read_table = Squirrel(
                 Longitude = i['X'],
@@ -40,6 +43,6 @@ class Command(BaseCommand):
                 Runs_from = i['Runs from'],
                 )
 
-            read_table.save()
+                read_table.save()
 
 
