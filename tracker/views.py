@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sight
+from .models import Squirrel
 from django.shortcuts import redirect
 from .forms import SightForm
 
@@ -7,14 +7,14 @@ def homepage(request):
     return render(request,'tracker/homepage.html')
 
 def map_view(request):
-    sights = Sight.objects.all()[:100]
+    sights = Squirrel.objects.all()[:100]
     context = {
             'sights':sights,
             }
     return render(request, 'tracker/map.html', context)
 
 def list_sights(request):
-    sights = Sight.objects.all()
+    sights = Squirrel.objects.all()
     fields = ['Unique_Squirrel_Id','Longtitude','Latitude','Date','Shift']
     context = {
             'sights':sights,
@@ -54,7 +54,7 @@ def add_sights(request):
 
 def stats_view(request):
 
-    sights = Sight.objects.all()
+    sights = Squirrel.objects.all()
     # shift
     AM_n = sights.filter(Shift='AM').count()
     PM_n = sights.filter(Shift='PM').count()
