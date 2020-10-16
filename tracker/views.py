@@ -14,10 +14,10 @@ def map_view(request):
     return render(request, 'tracker/map.html', context)
 
 def list_sights(request):
-    sights = Squirrel.objects.all()
+    squirrel = Squirrel.objects.all()
     fields = ['Unique_Squirrel_Id','Longtitude','Latitude','Date','Shift']
     context = {
-            'sights':sights,
+            'squirrels':squirrel,
             'fields':fields,
             }
     return render(request, 'tracker/list.html', context)

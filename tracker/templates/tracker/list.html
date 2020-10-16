@@ -16,7 +16,7 @@
 		</p>
 		<p>
 		<ul>
-			<h5><ul><a href="map/" class="badge badge-primary">MAP</a> Click the button to view the squirrel tracking map.</ul></h6>
+			<h5><ul><a href="/map/" class="badge badge-primary">MAP</a> Click the button to view the squirrel tracking map.</ul></h6>
 			<h5><ul><a href="stats/" class="badge badge-info">STATS</a> Click the button to look at some descriptive statistics.</ul></h6>
 			<h5><ul><a href="add/"  class="badge badge-warning">ADD</a> If you see a squirrel, click the ADD button to add a new squirrel sighting!</ul></h6>
 		</ul>
@@ -36,14 +36,14 @@
                         </thead>
 
                         <tbody>
-                        {% for sight in sights %}
+                        {% for squirrel in squirrels %}
                                 <tr>
-                                        <td><a href="{{sight.Unique_Squirrel_Id}}/">{{ sight.Unique_Squirrel_Id }}</a></td>
-                                        <td>{{ sight.Longitude }}</td>
-                                        <td>{{ sight.Latitude }}</td>
-                                        <td>{{ sight.Date }}</td>
-                                        <td>{{ sight.Shift }}</td>
-					<td>{{ sight.Age }}</td>
+                                        <td><a href="{{squirrel.Unique_Squirrel_Id}}/">{{ squirrel.Unique_Squirrel_Id }}</a></td>
+                                        <td>{{ squirrel.Longitude }}</td>
+                                        <td>{{ squirrel.Latitude }}</td>
+                                        <td>{{ squirrel.Date }}</td>
+                                        <td>{{ squirrel.Shift }}</td>
+					<td>{{ squirrel.Age }}</td>
                                 </tr>
                         {% endfor %}
                         </tbody>
