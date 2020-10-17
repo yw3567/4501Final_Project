@@ -60,11 +60,11 @@ def stats_view(request):
     num_moan = Squirrel.objects.filter(Moans='TRUE').count()
 
     context = {
-            'Juvenile_Adult_diff' = Juvenile_Adult_diff,
-            'num_chasing' = num_chasing,
-            'num_climbing' = num_climbing,
-            'early_bird_squirrel' = early_bird_squirrel,
-            'num_moan' = num_moan,
+            'Juvenile_Adult_diff' : Juvenile_Adult_diff,
+            'num_chasing' : num_chasing,
+            'num_climbing' : num_climbing,
+            'early_bird_squirrel' : early_bird_squirrel,
+            'num_moan' : num_moan,
             }
 
     return render(request, 'tracker/stats.html', context)
