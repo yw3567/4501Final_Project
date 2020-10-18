@@ -54,10 +54,10 @@ def add_sights(request):
 
 def stats_view(request):
     Juvenile_Adult_diff = abs(Squirrel.objects.filter(Age = 'Adult').count() - Squirrel.objects.filter(Age = 'Juvenilt').count())
-    num_chasing = Squirrel.objects.filter(Chasing = 'True').count()
-    num_climbing = Squirrel.objects.filter(Climbing = 'True').count()
+    num_chasing = Squirrel.objects.filter(Chasing = 'true').count()
+    num_climbing = Squirrel.objects.filter(Climbing = 'true').count()
     early_bird_squirrel = Squirrel.objects.filter(Shift = 'AM').count()
-    num_moan = Squirrel.objects.filter(Moans = 'True').count()
+    num_moan = Squirrel.objects.filter(Moans = 'true').count()
 
     context = {
             'Juvenile_Adult_diff' : Juvenile_Adult_diff,
