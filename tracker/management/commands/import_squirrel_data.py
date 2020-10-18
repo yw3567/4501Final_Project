@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = 'Get csv file of squirrel data'
 
     def add_arguments(self, parser):
-        parser.add_argument('squirrel_file', help='file containing squirrel details')
+        parser.add_argument('squirrel_file')
 
     def handle(self, *args, **options):
         file_ = options['squirrel_file']
@@ -16,7 +16,7 @@ class Command(BaseCommand):
             reader = csv.DictReader(csvfile)
             table = list(reader)
 
-            for i in reader:
+            for i in table:
                 read_table = Squirrel(
                 Longitude = i['X'],
                 Latitude = i['Y'],
@@ -45,4 +45,4 @@ class Command(BaseCommand):
 
                 read_table.save()
 
-
+            
